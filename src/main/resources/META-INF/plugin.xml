@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>org.example.ReminderPlugin</id>
+    <name>HaveYou</name>
+    <vendor email="haliluluoglu@gmail.com" url="http://www.haliluluoglu.com">Halil Uluoglu</vendor>
+    <version>1.0-SNAPSHOT</version>
+
+    <description>
+        It reminds you personalized questions when you try to close the IDEA
+    </description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <projectCloseHandler implementation="com.example.myideademo.MyListenerClass"/>
+    </extensions>
+
+    <actions>
+       <group id="MyIdeaDemo.HelloAction" text="MyIdeaDemo" description="about my idea">
+           <add-to-group group-id="MainMenu" anchor="last"></add-to-group>
+           <action class="com.example.myideademo.HelloAction" id="MyIdeaDemo.Actions.HelloAction" text="Say Hello"></action>
+       </group>s
+    </actions>
+
+
+</idea-plugin>
